@@ -1,0 +1,21 @@
+mutation createNote($note: NoteInput) {       # CREATE
+    createNote(note: $note) {
+        id
+        content
+    }
+}
+query listNotes{                               # READ
+    listNotes {
+        id
+        content
+    }
+}
+mutation updateNote($note: UpdateNoteInput) {   # UPDATE
+    updateNote(note: $note) {
+        id
+        content
+    }
+}
+mutation deleteNote($noteId: String!) {         # DELETE
+    deleteNote(noteId: $noteId)
+}
